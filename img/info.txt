@@ -1,0 +1,3 @@
+Archivo de información de las imagenes
+
+exit
