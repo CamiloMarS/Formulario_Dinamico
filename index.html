@@ -5,32 +5,57 @@
         <title>Dinamic Form</title>
         <meta name="description" content="Formulario HTML y CSS">
         <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Playfair+Display|Spirax" rel="stylesheet"> 
     </head>
     <body>
         <main>
+            <div class="degragado">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>        
+                    <li></li>       
+                    <li></li>
+                    <li></li>  
+                </ul>
+            </div>
             <section class="section_form">
-                <h1>Formulario Dinámico</h1>
                 <div class="login_form">
+                    <h1 class="titleForm">Formulario Dinámico</h1>
                     <div>
-                        <label for="username">Usuario: </label>
-                        <input type="text" id="username" name="username" placeholder="Su nombre de usuario">
+                       <div class="inputs inputsLeft">
+                           <label for="username"> Usuario: </label>                        </div>
+                       <div class="inputs inputRight">
+                           <input type="text" id="username" name="username" placeholder="Su nombre de usuario">
+                        </div>
                     </div>
                     <div>
-                        <label for="useremail">Correo: </label>
-                        <input type="email" name="useremail" id="useremail" placeholder="micorreo@dominio.com">
+                       <div  class="inputs inputsLeft">
+                           <label for="useremail">Correo: </label>
+                       </div>                        
+                       <div  class="inputs inputRight">
+                           <input type="email" name="useremail" id="useremail" placeholder="micorreo@dominio.com">
+                       </div>
                     </div>
                     <div>
-                        <label for="userpassword">Contraseña: </label>
-                        <input type="password" name="userpassword" id="userpassword" placeholder="******">
-                    </div>
-                    <div>
-                        <button>Cancelar</button>
-                        <button>Ingresar</button>
+                        <div  class="inputs inputsLeft"><label for="userpassword">Contraseña: </label>
+                        </div>
+                        <div  class="inputs inputRight">
+                            <input type="password" name="userpassword" id="userpassword" placeholder="******">
+                        </div>                        
+                        <button class="btn">Ingresar</button>
                     </div>
                 </div>
             </section>
-        </main>
-        
+            <section>
+                <div class="welcome">
+                    <h1>Welcome!!!</h1>
+                    <img src="https://vignette.wikia.nocookie.net/welcome-to-bloxburg/images/7/74/Charizard_shake_butt.gif/revision/latest?cb=20180216200936" alt="Bienvenid@s ">
+                </div>
+            </section>
+        </main>        
         <!-- scripts -->
         <script src="./js/main.js"></script>
     </body>
