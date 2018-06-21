@@ -1,9 +1,3 @@
-/*var btn = document.querySelector("#btnIngresar");
-btn.addEventListener
-(
-    "click" , validarEmail
-);*/
-
 var email = document.getElementById("txtUseremail");
 var password = document.getElementById("txtUserpassword");
 var username = document.getElementById("txtUsername");
@@ -11,7 +5,8 @@ var mensajeUsuario = document.getElementById("mensajeUsername");
 var mensajeEmail = document.getElementById("mensajeEmail");
 var mensajePassword = document.getElementById("mensajePassword");
 
-function validarUserName(){
+function validarUserName()
+{
     var valor = this.username.value;
     var regEx = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
 
@@ -89,4 +84,3 @@ function validacion()
     }
     
 }
-
