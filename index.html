@@ -5,29 +5,33 @@
         <title>Dinamic Form</title>
         <meta name="description" content="Formulario HTML y CSS">
         <link rel="stylesheet" href="./css/styles.css">
+        
     </head>
     <body>
         <main>
             <section class="section_form">
                 <h1>Formulario Dinámico</h1>
-                <div class="login_form">
+                <div class="login_form" id="divLogin">
                     <div>
                         <label for="username">Usuario: </label>
-                        <input type="text" id="username" name="username" placeholder="Su nombre de usuario">
+                        <input type="text" id="txtUsername" name="username" placeholder="Su nombre de usuario">
+                        <span id="mensajeUsername"></span>
                     </div>
                     <div>
                         <label for="useremail">Correo: </label>
-                        <input type="email" name="useremail" id="useremail" placeholder="micorreo@dominio.com">
+                        <input type="email" name="useremail" id="txtUseremail" placeholder="micorreo@dominio.com" >
+                        <span id="mensajeEmail"></span>
                     </div>
                     <div>
                         <label for="userpassword">Contraseña: </label>
-                        <input type="password" name="userpassword" id="userpassword" placeholder="******">
+                        <input type="password" name="userpassword" id="txtUserpassword" placeholder="******">
+                        <span id="mensajePassword"></span>
                     </div>
                     <div>
-                        <button>Cancelar</button>
-                        <button>Ingresar</button>
+                        <input type="button" id="btnIngresar" value="Ingresar" onclick="validacion()"></input>
                     </div>
                 </div>
+                <div id="divBienvenida"><h1>BIENVENID@ :)</h1></div>
             </section>
         </main>
         
