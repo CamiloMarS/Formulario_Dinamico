@@ -25,10 +25,12 @@
                 <div class="login_form">
                     <h1 class="titleForm">Formulario Dinámico</h1>
                     <div>
-                       <div class="inputs inputsLeft">
-                           <label for="username"> Usuario: </label>                        </div>
-                       <div class="inputs inputRight">
+                        <div class="inputs inputsLeft">
+                           <label for="username"> Usuario: </label>              
+                        </div>
+                        <div class="inputs inputRight">
                            <input type="text" id="username" name="username" placeholder="Su nombre de usuario">
+                           <br><span class="user_messages">Usuario incorrecto</span>
                         </div>
                     </div>
                     <div>
@@ -37,13 +39,16 @@
                        </div>                        
                        <div  class="inputs inputRight">
                            <input type="email" name="useremail" id="useremail" placeholder="micorreo@dominio.com">
+                           <br><span class="user_messages">email incorrecto</span>
                        </div>
                     </div>
                     <div>
-                        <div  class="inputs inputsLeft"><label for="userpassword">Contraseña: </label>
+                        <div  class="inputs inputsLeft">
+                            <label for="userpassword">Contraseña: </label>
                         </div>
                         <div  class="inputs inputRight">
                             <input type="password" name="userpassword" id="userpassword" placeholder="******">
+                            <br><span class="user_messages">Password incorrecto</span>
                         </div>                        
                         <button id="btn-ingresar">Ingresar</button>
                     </div>
