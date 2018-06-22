@@ -1,3 +1,4 @@
+/** Eliminar margenes internos y externos por defecto**/
 *{
     padding:0;
     margin:0;
@@ -20,18 +21,20 @@
     text-align:center;
    
 }
+/* Seleccionar a la etiqueta <li> número 3*/
    .degragado ul li:nth-child(3){
-       background: rgba(142, 128, 129,.5);
+       background: rgba(211, 153, 6,1);
        border-radius:30px 0 0 0;
        
    }
+   /* Seleccionar a la etiqueta <li> número 4*/
    .degragado ul li:nth-child(4){
-        background: rgba(224, 188, 11,.3);
+        background: rgba(7, 130, 132,1);
        
    }
-   
+   /* Seleccionar a la etiqueta <li> número 5*/
    .degragado ul li:nth-child(5){
-       background: rgba(228, 36, 49, 0.5);
+        background: rgba(61, 3, 54, 1);
         border-radius:0 30px 0 0;
        
    }
@@ -58,7 +61,7 @@
 .inputsLeft{
     width:35%;
     text-align:right;    
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /*Fuente tomada de Google Fonts*/
     font-size:18px;
     font-weight:bolder;
     letter-spacing: 2px;
@@ -73,7 +76,7 @@
     text-align:center;
 }
 .titleForm{
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Josefin Slab', serif; /*Fuente tomada de Google Fonts*/
     font-size:36px;
 }
 
