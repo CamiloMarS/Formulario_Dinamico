@@ -21,7 +21,7 @@ function validarUserName()
         this.username.style.borderColor= "red";
         this.mensajeUsuario.style.color = "red";
         this.mensajeUsuario.style.fontWeight = "bold";
-        this.mensajeUsuario.innerHTML = "El nombre de usuario no debe comenzar ni finalizar con un punto";
+        this.mensajeUsuario.innerHTML = "Nombre de usuario incorrecto";
         return false;
     }
 
@@ -43,7 +43,7 @@ function validarEmail()
         this.email.style.borderColor= "red";
         this.mensajeEmail.style.color = "red";
         this.mensajeEmail.style.fontWeight = "bold";
-        this.mensajeEmail.innerHTML = "Dirección de url incorrecta, recuerda que debe ser de esta forma: algo@algo.com";
+        this.mensajeEmail.innerHTML = "Email incorrecto";
         return false;
     }
     
@@ -65,7 +65,7 @@ function validarPassword()
         this.password.style.borderColor= "red";
         this.mensajePassword.style.color = "red";
         this.mensajePassword.style.fontWeight = "bold";
-        this.mensajePassword.innerHTML = "El password debe contener numeros, letras mayúsculas y minúsculas de entre 4 a 8 caracteres";
+        this.mensajePassword.innerHTML = "Password incorrecto";
         return false;
     }
 
@@ -79,8 +79,8 @@ function validacion()
 
     if( username && email && password)
     {
-        document.getElementById("divLogin").style.display = "none";
-        document.getElementById("divBienvenida").style.display = "block";
+        document.querySelector(".login_form").style.display = "none";
+        document.querySelector(".divBienvenida").style.display = "block";
     }
     
 }
