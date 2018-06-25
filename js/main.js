@@ -8,6 +8,11 @@ var music = new Audio("./media/shootingstar.mp3");
 var rutaImg = "./media/img/";
 var boton = document.getElementById("btnIngresar");
 
+var validaUserName = false;
+var validaUserEmail = false;
+var validaPassword = false;
+
+
 this.boton.disabled = true;
 
 //Array con los valores una vez validados los campos
@@ -22,6 +27,7 @@ function validarUserName()
     {
         this.mensajeUsuario.style.display = "block";
         this.mensajeUsuario.src = rutaImg + "checked.png";
+        //this.validaUserName = true;
         return true;
     }
     else
@@ -43,6 +49,7 @@ function validarEmail()
     {
         this.mensajeCorreo.style.display = "block";
         this.mensajeCorreo.src = rutaImg + "checked.png";
+        //this.validaUserEmail = true;
         return true;
     }
     else
@@ -50,6 +57,7 @@ function validarEmail()
         this.mensajeCorreo.style.display = "block";
         this.mensajeCorreo.src = rutaImg + "error.png";
         this.email.placeholder = "Email incorrecto";
+        //this.validaPassword = true;
         return false;
     }
     
@@ -76,51 +84,59 @@ function validarPassword()
 
 }
 
-username.addEventListener(
-    "keypress", function(e)
+    username.addEventListener
+    (
+        "keypress", function(e)
+        {
+            validarUserName();
+            //arrayUser.push(validaUserName);        
+        }
+    );
+
+    email.addEventListener(
+        "keypress", function(e)
+        {
+            validarEmail();
+            //arrayEmail.push(validaUserEmail);
+        }
+    );
+
+    password.addEventListener(
+        "keypress", function(e)
+        {
+            validarPassword();
+            validar();
+            //console.log("user: "+this.validaUserName+" email: "+this.validaUserEmail+" password: "+this.validaPassword);  
+        }
+    );
+
+    function validar()
     {
-        var validaUserName = validarUserName();
-        //console.log("username"+validaUserName);
-        if(validaUserName===true){
-            numero++;
-            //console.log(numero)
-            //activar(numero);
+        var imguser = document.getElementById("imgUsername");
+        var imgemail = document.getElementById("imgEmail");
+        var imgpassword = document.getElementById("imgPassword");
+
+        imguser = imguser.src;
+        imguser = imguser.substring(65,imguser.lenght);
+        imgemail = imgemail.src;
+        imgemail = imgemail.substring(65,imgemail.lenght);
+        imgpassword = imgpassword.src;
+        imgpassword=imgpassword.substring(65,imgpassword.lenght);
+        correcto = "/media/img/checked.png";
+        incorrecto = "/media/img/error.png";
+
+        if(imguser == correcto && imgemail == correcto && imgpassword == correcto)
+        {
+            activar();
+            bienvenida();
         }
     }
-);
 
-email.addEventListener(
-    "keypress", function(e)
-    {
-        var validaUserEmail = validarEmail();
-        //console.log("email"+validaUserEmail);
-        if(validaUserEmail===true){
-            numero++;
-           // console.log(numero)
-        }
-    
-    }
-);
 
-password.addEventListener(
-    "keypress", function(e)
-    {
-        var validaPassword = validarPassword();
-       // console.log("password"+validaPassword);
-        if(validaPassword===true){
-            numero++;
-            //console.log(numero);
-            activar(numero);
-        }
-    }
-);
 
-function activar(numero){
-    if(numero >= 3){
+function activar(){
         this.boton.disabled = false;
         bienvenida();
-    }
-    numero = 0;
 }
 
 function bienvenida(){
@@ -132,3 +148,6 @@ function bienvenida(){
         music.play();
     });
 }
+
+
+//inputs(username,email,password);
