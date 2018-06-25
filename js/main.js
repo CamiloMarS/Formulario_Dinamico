@@ -10,6 +10,9 @@ var boton = document.getElementById("btnIngresar");
 
 this.boton.disabled = true;
 
+//Array con los valores una vez validados los campos
+var numero = 0;
+
 function validarUserName()
 {
     var valor = this.username.value;
@@ -73,14 +76,17 @@ function validarPassword()
 
 }
 
-
 username.addEventListener
 (
     "keypress", function(e)
     {
         var validaUserName = validarUserName();
-        console.log("username"+validaUserName);
-    
+        //console.log("username"+validaUserName);
+        if(validaUserName===true){
+            numero++;
+            //console.log(numero)
+            //activar(numero);
+        }
     }
 );
 
@@ -89,7 +95,11 @@ email.addEventListener
     "keypress", function(e)
     {
         var validaUserEmail = validarEmail();
-        console.log("email"+validaUserEmail);
+        //console.log("email"+validaUserEmail);
+        if(validaUserEmail===true){
+            numero++;
+           // console.log(numero)
+        }
     
     }
 );
@@ -99,9 +109,20 @@ password.addEventListener
     "keypress", function(e)
     {
         var validaPassword = validarPassword();
-        console.log("password"+validaPassword);
+       // console.log("password"+validaPassword);
+        if(validaPassword===true){
+            numero++;
+            //console.log(numero);
+            activar(numero);
+        }
     }
 );
+
+function activar(numero){
+    if(numero>0){
+        this.boton.disabled = false;
+    }
+}
 
 /*
 function habilitarBotonMostrarBienvenida(user, email, pass)
