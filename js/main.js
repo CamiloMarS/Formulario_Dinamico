@@ -116,7 +116,7 @@ password.addEventListener(
 );
 
 function activar(numero){
-    if(numero>0){
+    if(numero >= 3){
         this.boton.disabled = false;
         bienvenida();
     }
