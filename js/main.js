@@ -4,7 +4,7 @@ var password = document.getElementById("txtUserpassword");
 var mensajeUsuario = document.getElementById("imgUsername");
 var mensajeCorreo = document.getElementById("imgEmail");
 var mensajePassword = document.getElementById("imgPassword");
-var music = new Audio("./media/shooting star.mp3");
+var music = new Audio("./media/shootingstar.mp3");
 var rutaImg = "./media/img/";
 var boton = document.getElementById("btnIngresar");
 
@@ -76,8 +76,7 @@ function validarPassword()
 
 }
 
-username.addEventListener
-(
+username.addEventListener(
     "keypress", function(e)
     {
         var validaUserName = validarUserName();
@@ -90,8 +89,7 @@ username.addEventListener
     }
 );
 
-email.addEventListener
-(
+email.addEventListener(
     "keypress", function(e)
     {
         var validaUserEmail = validarEmail();
@@ -104,8 +102,7 @@ email.addEventListener
     }
 );
 
-password.addEventListener
-(
+password.addEventListener(
     "keypress", function(e)
     {
         var validaPassword = validarPassword();
@@ -121,35 +118,16 @@ password.addEventListener
 function activar(numero){
     if(numero>0){
         this.boton.disabled = false;
+        bienvenida();
     }
 }
 
-/*
-function habilitarBotonMostrarBienvenida(user, email, pass)
-{
-    user = this.validaUserName;
-    email = this.validaUserEmail;
-    pass = this.validaPassword;
-    console.log("user "+user+" email "+email+" pass "+pass);
-    if(this.validaUserName && this.validaUserEmail && this.validaPassword)
-    {
-        this.boton.disabled = false;
-
-        if(this.boton !== null)
-        {
-            this.boton.addEventListener
-            (
-                "click", function(e)
-                {
-                    document.querySelector(".degragado").style.display="none";
-                    document.querySelector(".login_form").style.display = "none";
-                    document.querySelector(".divBienvenida").style.display = "block";    
-                }
-            );
-        }
-
-    }
+function bienvenida(){
+    let btn = document.querySelector("#btnIngresar");
+    btn.addEventListener("click", function(){
+        document.querySelector(".degragado").style.display = "none";
+        document.querySelector(".login_form").style.display = "none";
+        document.querySelector(".divBienvenida").style.display = "block";
+        music.play();
+    });
 }
-
-habilitarBotonMostrarBienvenida();
-*/

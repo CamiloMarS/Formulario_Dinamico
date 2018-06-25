@@ -55,7 +55,7 @@ body
 {
     position:absolute;
     width:38.8%;
-    height: 40vh;
+    height: 26vh;
     left: 26%;
     border:1px solid gray;
     border-radius:0 0 30px 30px;
@@ -72,6 +72,7 @@ body
 .inputs
 {
    float:left;
+   margin-bottom:5px;
 }
 
 .inputsLeft
@@ -103,8 +104,8 @@ body
 
 .btn
 {
-    width:120px;
-    margin-top:15px;
+    width:150px;
+    margin-top:8px;
     text-align:center;
 }
 
