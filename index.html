@@ -17,8 +17,8 @@
                     <li></li>
                     <li></li>
                     <li></li>        
-                    <li></li>       
-                    <li></li>
+                    <li></li> 
+                    <li></li>        
                     <li></li>  
                 </ul>
             </div>
@@ -31,9 +31,8 @@
                             <label for="username">Usuario: </label>
                         </div>
                         <div class="inputs inputRight">
-                            <input type="text" id="txtUsername" name="username" placeholder="Su nombre de usuario" title="El nombre de usuario no debe comenzar ni finalizar con un punto">
-                            <br>
-                            <span class="mensajes" id="mensajeUsername"></span>
+                            <input type="text" id="txtUsername" name="username" placeholder="Su nombre de usuario" title="El nombre de usuario no debe comenzar ni finalizar con un punto" required>
+                            <span>Si</span>
                         </div>
                     </div>
                     <br>
@@ -42,9 +41,8 @@
                             <label for="useremail">Correo: </label>
                         </div>
                         <div class="inputs inputRight">
-                            <input type="email" name="useremail" id="txtUseremail" placeholder="micorreo@dominio.com" title="Dirección de url incorrecta, recuerda que debe ser de esta forma: correo@dominio.com" >
-                            <br>
-                            <span class="mensajes" id="mensajeEmail"></span>
+                            <input type="email" name="useremail" id="txtUseremail" placeholder="micorreo@dominio.com" title="Dirección de url incorrecta, recuerda que debe ser de esta forma: correo@dominio.com" required>
+                            <span>Si</span>
                         </div>
                     </div>
                     <br>
@@ -53,16 +51,17 @@
                             <label for="userpassword">Contraseña: </label>
                         </div>
                         <div class="inputs inputRight">
-                            <input type="password" name="userpassword" id="txtUserpassword" title="El password debe contener numeros, letras mayúsculas y minúsculas de entre 4 a 8 caracteres" placeholder="******">
-                            <span class="mensajes" id="mensajePassword"></span>
+                            <input type="password" name="userpassword" id="txtUserpassword" title="El password debe contener numeros, letras mayúsculas y minúsculas de entre 4 a 8 caracteres" placeholder="******" required>
+                            <span>Si</span>
                         </div>
                     </div>
                     <br>
-                        <input type="button" id="btnIngresar" value="Ingresar"  onclick="validacion()"></input>
+                
+                        <input type="button" id="btnIngresar" value="Ingresar"></input>
                 </div>
                 <div class="divBienvenida">
                     <h1>BIENVENID@ :)</h1>
-                    <img src="https://vignette.wikia.nocookie.net/welcome-to-bloxburg/images/7/74/Charizard_shake_butt.gif/revision/latest?cb=20180216200936" alt="Bienvenid@s ">
+                    <img class="img_bienvenido" src="https://vignette.wikia.nocookie.net/welcome-to-bloxburg/images/7/74/Charizard_shake_butt.gif/revision/latest?cb=20180216200936" alt="Bienvenid@s ">
                 </div>
             </section>
         </main>

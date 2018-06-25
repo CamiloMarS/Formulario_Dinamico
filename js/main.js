@@ -1,9 +1,9 @@
 var email = document.getElementById("txtUseremail");
 var password = document.getElementById("txtUserpassword");
 var username = document.getElementById("txtUsername");
-var mensajeUsuario = document.getElementById("mensajeUsername");
-var mensajeEmail = document.getElementById("mensajeEmail");
-var mensajePassword = document.getElementById("mensajePassword");
+//var mensajeUsuario = document.getElementById("mensajeUsername");
+//var mensajeEmail = document.getElementById("mensajeEmail");
+var music = new Audio("./media/shooting star.mp3");
 
 function validarUserName()
 {
@@ -12,16 +12,17 @@ function validarUserName()
 
     if(valor.search(regEx)==0)
     {
-        this.username.style.borderColor= "green";
-        this.mensajeUsuario.innerHTML = " ";
+        //this.username.style.borderColor= "green";
+        //this.mensajeUsuario.innerHTML = " ";
         return true;
     }
     else
     {
-        this.username.style.borderColor= "red";
-        this.mensajeUsuario.style.color = "red";
+        /*this.username.style.borderColor= "red";*/
+        this.username.placeholder = "Username muy incorrecto";
+        /*this.mensajeUsuario.style.color = "red";
         this.mensajeUsuario.style.fontWeight = "bold";
-        this.mensajeUsuario.innerHTML = "Nombre de usuario incorrecto";
+        this.mensajeUsuario.innerHTML = "Nombre de usuario incorrecto";*/
         return false;
     }
 
@@ -34,16 +35,17 @@ function validarEmail()
 
     if(valor.search(regEx)==0)
     {
-        this.email.style.borderColor= "green";
-        this.mensajeEmail.innerHTML = " ";
+       // this.email.style.borderColor= "green";
+        //this.mensajeEmail.innerHTML = " ";
         return true;
     }
     else
     {
-        this.email.style.borderColor= "red";
-        this.mensajeEmail.style.color = "red";
+        /*this.email.style.borderColor= "red";*/
+        this.email.placeholder = "Email incorrecto";
+       /* this.mensajeEmail.style.color = "red";
         this.mensajeEmail.style.fontWeight = "bold";
-        this.mensajeEmail.innerHTML = "Email incorrecto";
+        this.mensajeEmail.innerHTML = "Email incorrecto";*/
         return false;
     }
     
@@ -56,31 +58,44 @@ function validarPassword()
 
     if(valor.search(regEx)==0)
     {
-        this.password.style.borderColor= "green";
-        this.mensajeEmail.innerHTML = " ";
+        //this.password.style.borderColor= "green";
+        //this.mensajeEmail.innerHTML = " ";
         return true;
     }
     else
     {
-        this.password.style.borderColor= "red";
-        this.mensajePassword.style.color = "red";
-        this.mensajePassword.style.fontWeight = "bold";
-        this.mensajePassword.innerHTML = "Password incorrecto";
+        /*this.password.style.borderColor= "red";*/
+        this.password.placeholder = "Password invalida";
+        /*this.mensajePassword.style = "color:red; font-weight:bold; font-size:12px;";
+        this.mensajePassword.innerHTML = "Password incorrecto";*/
         return false;
     }
 
 }
+let btn_ingresar = document.querySelector("#btnIngresar");
 
-function validacion()
-{
-    var username = validarUserName();
-    var email = validarEmail();
-    var password = validarPassword();
+    if(btn_ingresar!==null){
+        btn_ingresar.addEventListener("click", function(e){
 
-    if( username && email && password)
-    {
-        document.querySelector(".login_form").style.display = "none";
-        document.querySelector(".divBienvenida").style.display = "block";
+            var username = validarUserName();
+            var email = validarEmail();
+            var password = validarPassword();
+
+             console.log(e.target);
+            if( username && email && password)
+            {
+                document.querySelector(".degragado").style.display="none";
+                document.querySelector(".login_form").style.display = "none";
+                document.querySelector(".divBienvenida").style.display = "block";
+            }
+
+        });
     }
-    
-}
+
+
+/*
+ Personal y luego en equipo
+-- Que salio Bien - 3 cosas
+-- Que no salio tan Bien - 3 cosas
+-- Propuesta para mejorar lo que no salio bien. - 2 sujerencias
+*/
