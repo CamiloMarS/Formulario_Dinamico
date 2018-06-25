@@ -120,6 +120,7 @@ function activar(numero){
         this.boton.disabled = false;
         bienvenida();
     }
+    numero = 0;
 }
 
 function bienvenida(){
