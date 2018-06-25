@@ -3,21 +3,29 @@
     margin:0;
 }
 
-body{
+
+
+body
+{
     background:rgb(255,240,255);
 }
 
-.degragado{
+.degragado
+{
     position:relative;
     width:100%;
     height:5vh;
     margin-top:5px;
     border-radius:30px 30px 0 0;
 }
-.degragado ul{
+
+.degragado ul
+{
     list-style:none;
 }
-.degragado ul li{
+
+.degragado ul li
+{
     width:13%;
     height: 5vh;
     display:inline;
@@ -25,11 +33,13 @@ body{
     text-align:center;
    
 }
+
 .degragado ul li:nth-child(3)
 {
     background: rgba(142, 128, 129,.5);
     border-radius:30px 0 0 0;   
 }
+
 .degragado ul li:nth-child(4)
 {
     background: rgba(224, 188, 11,.3);   
@@ -40,6 +50,7 @@ body{
     background: rgba(228, 36, 49, 0.5);
     border-radius:0 30px 0 0;       
 }
+
 .login_form
 {
     position:absolute;
@@ -62,6 +73,7 @@ body{
 {
    float:left;
 }
+
 .inputsLeft
 {
     width:35%;
@@ -70,8 +82,10 @@ body{
     font-size:18px;
     font-weight:bolder;
     letter-spacing: 2px;
-}            
-.inputRight{
+}     
+
+.inputRight
+{
     width:65%;
     text-align:center;
 }
@@ -87,11 +101,13 @@ body{
     margin-top: -25px;
 }
 
-.btn{
+.btn
+{
     width:120px;
     margin-top:15px;
     text-align:center;
 }
+
 .titleForm{
     font-family: 'Josefin Slab', serif;
     font-size:36px;
@@ -108,6 +124,7 @@ body{
     margin: 0 auto;
 
 }
+
 .img_bienvenido{
   width: 100%;
   height: 100%;
@@ -118,7 +135,8 @@ body{
     display:none;
 }
 
-.divBienvenida > h1{
+.divBienvenida > h1
+{
     background:rgba(0,34,240,.7);
     border-radius:30px;
     color:#fff;
