@@ -1,28 +1,28 @@
 var email = document.getElementById("txtUseremail");
 var password = document.getElementById("txtUserpassword");
 var username = document.getElementById("txtUsername");
-//var mensajeUsuario = document.getElementById("mensajeUsername");
-//var mensajeEmail = document.getElementById("mensajeEmail");
+var mensajeUsuario = document.getElementById("imgUsername");
+var mensajeCorreo = document.getElementById("imgEmail");
+var mensajePassword = document.getElementById("imgPassword");
 var music = new Audio("./media/shooting star.mp3");
+var rutaImg = "./media/img/";
 
 function validarUserName()
 {
     var valor = this.username.value;
     var regEx = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
 
-    if(valor.search(regEx)==0)
+    if(valor.search(regEx) == 0)
     {
-        //this.username.style.borderColor= "green";
-        //this.mensajeUsuario.innerHTML = " ";
+        this.mensajeUsuario.style.display = "block";
+        this.mensajeUsuario.src = rutaImg + "checked.png";
         return true;
     }
     else
     {
-        /*this.username.style.borderColor= "red";*/
+        this.mensajeUsuario.style.display = "block";
+        this.mensajeUsuario.src = rutaImg + "error.png";
         this.username.placeholder = "Username muy incorrecto";
-        /*this.mensajeUsuario.style.color = "red";
-        this.mensajeUsuario.style.fontWeight = "bold";
-        this.mensajeUsuario.innerHTML = "Nombre de usuario incorrecto";*/
         return false;
     }
 
@@ -35,17 +35,15 @@ function validarEmail()
 
     if(valor.search(regEx)==0)
     {
-       // this.email.style.borderColor= "green";
-        //this.mensajeEmail.innerHTML = " ";
+        this.mensajeCorreo.style.display = "block";
+        this.mensajeCorreo.src = rutaImg + "checked.png";
         return true;
     }
     else
     {
-        /*this.email.style.borderColor= "red";*/
+        this.mensajeCorreo.style.display = "block";
+        this.mensajeCorreo.src = rutaImg + "error.png";
         this.email.placeholder = "Email incorrecto";
-       /* this.mensajeEmail.style.color = "red";
-        this.mensajeEmail.style.fontWeight = "bold";
-        this.mensajeEmail.innerHTML = "Email incorrecto";*/
         return false;
     }
     
@@ -58,16 +56,15 @@ function validarPassword()
 
     if(valor.search(regEx)==0)
     {
-        //this.password.style.borderColor= "green";
-        //this.mensajeEmail.innerHTML = " ";
+        this.mensajePassword.style.display = "block";
+        this.mensajePassword.src = rutaImg + "checked.png";
         return true;
     }
     else
     {
-        /*this.password.style.borderColor= "red";*/
+        this.mensajePassword.style.display = "block";
+        this.mensajePassword.src = rutaImg + "error.png";
         this.password.placeholder = "Password invalida";
-        /*this.mensajePassword.style = "color:red; font-weight:bold; font-size:12px;";
-        this.mensajePassword.innerHTML = "Password incorrecto";*/
         return false;
     }
 
@@ -91,11 +88,3 @@ let btn_ingresar = document.querySelector("#btnIngresar");
 
         });
     }
-
-
-/*
- Personal y luego en equipo
--- Que salio Bien - 3 cosas
--- Que no salio tan Bien - 3 cosas
--- Propuesta para mejorar lo que no salio bien. - 2 sujerencias
-*/

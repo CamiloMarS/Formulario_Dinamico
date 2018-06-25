@@ -75,6 +75,18 @@ body{
     width:65%;
     text-align:center;
 }
+
+.imgMensajes
+{
+    /* float: right; */
+    display: none;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 20px;
+    margin-top: -25px;
+}
+
 .btn{
     width:120px;
     margin-top:15px;
