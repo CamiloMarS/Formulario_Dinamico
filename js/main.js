@@ -148,6 +148,3 @@ function bienvenida(){
         music.play();
     });
 }
-
-
-//inputs(username,email,password);
