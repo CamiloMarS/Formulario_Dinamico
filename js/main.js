@@ -8,15 +8,8 @@ var music = new Audio("./media/shootingstar.mp3");
 var rutaImg = "./media/img/";
 var boton = document.getElementById("btnIngresar");
 
-var validaUserName = false;
-var validaUserEmail = false;
-var validaPassword = false;
-
-
 this.boton.disabled = true;
 
-//Array con los valores una vez validados los campos
-var numero = 0;
 
 function validarUserName()
 {
@@ -27,7 +20,6 @@ function validarUserName()
     {
         this.mensajeUsuario.style.display = "block";
         this.mensajeUsuario.src = rutaImg + "checked.png";
-        //this.validaUserName = true;
         return true;
     }
     else
@@ -49,7 +41,6 @@ function validarEmail()
     {
         this.mensajeCorreo.style.display = "block";
         this.mensajeCorreo.src = rutaImg + "checked.png";
-        //this.validaUserEmail = true;
         return true;
     }
     else
@@ -57,7 +48,6 @@ function validarEmail()
         this.mensajeCorreo.style.display = "block";
         this.mensajeCorreo.src = rutaImg + "error.png";
         this.email.placeholder = "Email incorrecto";
-        //this.validaPassword = true;
         return false;
     }
     
@@ -84,73 +74,80 @@ function validarPassword()
 
 }
 
-    username.addEventListener
-    (
-        "keypress", function(e)
-        {
-            validarUserName();
-            validarEmail();
-            validarPassword();
-            //arrayUser.push(validaUserName);        
-        }
-    );
-
-    email.addEventListener(
-        "keypress", function(e)
-        {
-            validarUserName();
-            validarEmail();
-            validarPassword();
-            //arrayEmail.push(validaUserEmail);
-        }
-    );
-
-    password.addEventListener(
-        "keypress", function(e)
-        {
-            validarUserName();
-            validarEmail();
-            validarPassword();
-            validar();
-            //console.log("user: "+this.validaUserName+" email: "+this.validaUserEmail+" password: "+this.validaPassword);  
-        }
-    );
-
-    function validar()
+username.addEventListener
+(
+    "keypress", function(e)
     {
-        var imguser = document.getElementById("imgUsername");
-        var imgemail = document.getElementById("imgEmail");
-        var imgpassword = document.getElementById("imgPassword");
-
-        imguser = imguser.src;
-        imguser = imguser.substring(65,imguser.lenght);
-        imgemail = imgemail.src;
-        imgemail = imgemail.substring(65,imgemail.lenght);
-        imgpassword = imgpassword.src;
-        imgpassword=imgpassword.substring(65,imgpassword.lenght);
-        correcto = "/media/img/checked.png";
-        incorrecto = "/media/img/error.png";
-
-        if(imguser == correcto && imgemail == correcto && imgpassword == correcto)
-        {
-            activar();
-            bienvenida();
-        }
+        validarUserName();
+        validarEmail();
+        validarPassword();
+        validar();       
     }
+);
 
+email.addEventListener
+(
+    "keypress", function(e)
+    {
+        validarUserName();
+        validarEmail();
+        validarPassword();
+        validar();
+    }
+);
 
+password.addEventListener
+(
+    "keypress", function(e)
+    {
+        validarUserName();
+        validarEmail();
+        validarPassword();
+        validar();
+    }
+);
 
-function activar(){
-        this.boton.disabled = false;
+function validar()
+{
+    var imguser = document.getElementById("imgUsername");
+    var imgemail = document.getElementById("imgEmail");
+    var imgpassword = document.getElementById("imgPassword");
+
+    imguser = imguser.src; 
+    //  file:///home/seito/Documentos/proyectoSngular/Formulario_Dinamico/media/img/error.png
+    imguser = imguser.substring(65,imguser.lenght);
+    //  /media/img/error.png
+    imgemail = imgemail.src;
+    imgemail = imgemail.substring(65,imgemail.lenght);
+    imgpassword = imgpassword.src;
+    imgpassword=imgpassword.substring(65,imgpassword.lenght);
+    correcto = "/media/img/checked.png";
+    incorrecto = "/media/img/error.png";
+
+    if(imguser == correcto && imgemail == correcto && imgpassword == correcto)
+    {
+        activar();
         bienvenida();
+    }
 }
 
-function bienvenida(){
+function activar()
+{
+    this.boton.disabled = false;
+    bienvenida();
+}
+
+function bienvenida()
+{
     let btn = document.querySelector("#btnIngresar");
-    btn.addEventListener("click", function(){
+    btn.addEventListener
+    (
+        "click", function()
+        {
         document.querySelector(".degragado").style.display = "none";
         document.querySelector(".login_form").style.display = "none";
         document.querySelector(".divBienvenida").style.display = "block";
         music.play();
-    });
+        }
+    );
 }
