@@ -89,6 +89,8 @@ function validarPassword()
         "keypress", function(e)
         {
             validarUserName();
+            validarEmail();
+            validarPassword();
             //arrayUser.push(validaUserName);        
         }
     );
@@ -96,7 +98,9 @@ function validarPassword()
     email.addEventListener(
         "keypress", function(e)
         {
+            validarUserName();
             validarEmail();
+            validarPassword();
             //arrayEmail.push(validaUserEmail);
         }
     );
@@ -104,6 +108,8 @@ function validarPassword()
     password.addEventListener(
         "keypress", function(e)
         {
+            validarUserName();
+            validarEmail();
             validarPassword();
             validar();
             //console.log("user: "+this.validaUserName+" email: "+this.validaUserEmail+" password: "+this.validaPassword);  
